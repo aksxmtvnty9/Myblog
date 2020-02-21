@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome to Anush kumar N's portfolio</title>
-    <link rel="icon" href="ak icon.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="Assets/ak icon.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="Portfolio.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -71,11 +71,6 @@ function ret(){
     })
 };
 ret();
-//to lock the right click
-$(document).bind('contextmenu',function(){
-         return false;
-      }
-   );
 //scrollReval.js for items
    ScrollReveal().reveal('#home', { delay: 400 });
    ScrollReveal().reveal('#about', { delay: 800 });
@@ -188,38 +183,40 @@ function totop() {
         </div>
         <div id="aboutdiv">
             <p id="aboutme">About Me</p>
-            <div id="pic"class="img"><img src="ak.jpg" alt="mypic" style="border-radius: 50%;" draggable="false"></div>
-            <div id="intro" class="intro"><p>I'm a developer from Coimbatore.<br>I guess you're here because you want to know a bit about me, huh?<br>I'm not that good in talking about myself, but i'll give it a shot.</p></div>
+            <div class="aboutdiv-inside">
+               <div id="pic"class="img"><img src="Assets/ak.jpg" alt="mypic" style="border-radius: 50%;" draggable="false"></div>
+               <div id="intro" class="intro"><p>I'm a developer from Coimbatore. I guess you're here because you want to know a bit about me, huh? I'm not that good in talking about myself, but i'll give it a shot.</p></div>
+            </div>
         </div>
         <div id="projectsdiv">
             <p id="myproject">My Projects</p>
             <div id="project-1">
-               <img src="christmas.png" alt="christmas-generator" draggable="false">
+               <img src="Assets/christmas.png" alt="christmas-generator" draggable="false">
                <p>Eve wisher</p>
                <a href="">View project</a>
             </div>
             <div id="project-2">
-               <img src="bill.png" alt="bill-form project" draggable="false">
+               <img src="Assets/bill.png" alt="bill-form project" draggable="false">
                <p>Bill-form</p>
                <a href="">View project</a>
             </div>
             <div id="project-3">
-               <img src="c-calci.png" alt="c-calci project" draggable="false">
+               <img src="Assets/c-calci.png" alt="c-calci project" draggable="false">
                <p>C-Calculator</p>
                <a href="">View project</a>
             </div><br>
             <div id="project-4">
-               <img src="docky-block.jpg" alt="dockyminder project" draggable="false">
+               <img src="Assets/docky-block.jpg" alt="dockyminder project" draggable="false">
                <p>Dockyminder</p>
                <a href="https://play.google.com/store/apps/details?id=com.dockyminder.devp.dockyminder&hl=en" target="_blank">View project</a>
             </div>
             <div id="project-5">
-                  <img src="Ssv.png" alt="ssv project" draggable="false">
+                  <img src="Assets/Ssv.png" alt="ssv project" draggable="false">
                   <p>Material Dash</p>
                   <a href="">View project</a>
             </div>
             <div id="project-6">
-                  <img src="jam.png" alt="jam app project" draggable="false">
+                  <img src="Assets/jam.png" alt="jam app project" draggable="false">
                   <p>Intern Master</p>
                   <a href="">View project</a>
             </div>
@@ -229,14 +226,13 @@ function totop() {
             <span id="social-1"><a style="text-decoration: none;" href="https://www.hackerrank.com/anushkumar" target="_blank"><i class="fab fa-hackerrank" style="color:rgb(51, 204, 51)"></i></a></span>
             <span id="social-3"><a style="text-decoration: none;" href="https://github.com/Anushkumar06" target="_blank"><i class="fab fa-github-square" style="color:black"></i></a></span>
             <span id="social-2"><a style="text-decoration: none;" href="https://www.freecodecamp.org/anushkumar6" target="_blank"><i class="fab fa-free-code-camp" style="color:green"></i></a></span>
-            <span id="social-4"><a style="text-decoration: none;" href="https://plus.google.com/u/0/102519783104018838788" target="_blank"><i class="fab fa-google-plus" style="color:red"></i></a></span>
             <span id="social-8"><a style="text-decoration: none;" href="https://twitter.com/AnU_MoN629" target="_blank"><i class="fab fa-twitter" style="color:rgb(0, 217, 255)"></i></a></span>
             <span id="social-6"><a style="text-decoration: none;" href="https://medium.com/@anush.kumar.1998" target="_blank"><i class="fab fa-medium" style="color:black"></i></a></span>
             <span id="social-7"><a style="text-decoration: none;" href="https://codepen.io/anushkumar06/" target="_blank"><i class="fab fa-codepen" style="color:black"></i></a></span>
             <span id="social-5"><a style="text-decoration: none;" href="https://www.linkedin.com/in/anush-kumar-n-b48778145/" target="_blank"><i class="fab fa-linkedin" style="color:rgb(0, 110, 255)"></i></a></span> 
         </div>
         <footer id="footer">
-           <center>Handcrafted with <img src="heart.png" alt="heart" draggable="false"> by <a href="#aboutdiv">Anush kumar N</a></center><i class="fas "></i>
+           <center>Handcrafted with <img src="Assets/heart.png" alt="heart" draggable="false"> by <a href="#aboutdiv">Anush kumar N</a></center><i class="fas "></i>
         </footer>
 </body>
 </html>

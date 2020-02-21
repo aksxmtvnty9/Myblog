@@ -64,7 +64,7 @@ body{
     #homediv{
         width: 100%;
         height: 560px;
-        background-image: url('mob.svg');
+        background-image: url('Assets/mob.svg');
         background-size: cover;
     }
     #myname{
@@ -448,7 +448,7 @@ body{
         width: 100%;
         height: 720px;
         max-height: 100%;
-        background-image: url('mob.svg');
+        background-image: url('Assets/mob.svg');
         background-size: cover;
     }
     #myname{
@@ -844,14 +844,11 @@ body{
     .img{
         height:200;
         width:200; 
-        position: relative;
-        margin-left: 300px;
-        padding-top: 100px;
     }
     #homediv{
         width: 100%;
         height: 750px;
-        background-image: url('work.svg');
+        background-image: url('Assets/work.svg');
         background-size: cover;
     }
     #myname{
@@ -862,8 +859,7 @@ body{
         color: rgb(0, 132, 255)
     }
     #pic{
-        margin-left: 350px;
-        margin-top: 90px;
+        margin: 50px 0 0 0;
     }
     #message{
         position: relative;
@@ -873,15 +869,20 @@ body{
         color: black
     }
     .intro{
-        position: relative;
-        margin-left: 550px;
-        margin-top: -230px;
         font-size: 25px;
-        width: 800px;
+        width: 500px;
+        text-align: left;
     }
     #aboutdiv{
         width: 100%;
         height: 750px;
+        text-align: center;
+    }
+    .aboutdiv-inside{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-top:120px
     }
     #aboutdiv img{
         width: 200px;
@@ -889,20 +890,15 @@ body{
     }
     #aboutme{
         font-size: 65px;
-        position: relative;
-        padding-top: 70px;
-        margin-left: 600px;
     }
     #projectsdiv{
         width: 100%;
         height: 750px;
-        padding-left: 50px;
     }
     #myproject{
-        position: relative;
-        padding-top: 70px;
-        margin-left: 500px;
         font-size: 60px;
+        margin-left: 0px;
+        text-align: center;
     }
     #projectsdiv div{
         margin-left: 90px;
@@ -1121,21 +1117,20 @@ body{
         color: White;
     }
     #social{
-        position: relative;
         margin-top: 70px;
-        margin-left: 430px;
+        margin-left: 0px;
         font-size: 60px;
     }
     #contactsdiv{
+        text-align: center;
         width: 100%;
         height: 750px;
-        position: relative;
         border: 1px solid transparent;
     }
     #contactsdiv span{
-        position: relative;
-        margin-left: 45px;
-        padding: 10px 10px 10px 10px;
+        left: 0px;
+        margin-left: 0px;
+        padding: 10px;
         cursor: pointer;
         border-radius: 10px;
         background-color: transparent;

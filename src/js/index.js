@@ -1,7 +1,7 @@
 // particlesJS
 particlesJS.load(
   'particles-js',
-  '/src/js/libs/particle/particlesjs-config.json',
+  'js/libs/particle/particlesjs-config.json',
   function () {
     console.log('callback - particles.js config loaded')
   }

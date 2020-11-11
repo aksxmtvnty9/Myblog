@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+body {
+  background-color: black;
+  font-family: 'Raleway', sans-serif;
+}
+.notfound {
+  color: tomato;
+}
+.container {
+  display: none;
+}
+#particles-js {
+  display: none;
+}
+canvas {
+  display: none;
+}

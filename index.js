@@ -1,11 +1,29 @@
 $(document).ready(function () {
-  //visit counter
-  const HGE_URL = 'https://visitcounterapp.herokuapp.com/v1alpha1/graphql';
-  const r = new Request(HGE_URL);
-  const o = {
-    method: 'POST',
-    body: JSON.stringify({
-      query: `
+  const gotToTopBtn = document.querySelector('#myBtn');
+
+  // typewriting my name
+  const showText = (target, message, index, interval) => {
+    if (index < message.length) {
+      $(target).append(message[index++]);
+      setTimeout(function () {
+        showText(target, message, index, interval);
+      }, interval);
+    }
+  };
+  setTimeout(function () {
+    $(function () {
+      showText('#myname', 'Anush kumar N', 0, 150);
+    });
+  }, 2400);
+
+  // update visits counter
+  const updateVisitor = () => {
+    const HGE_URL = 'https://visitcounterapp.herokuapp.com/v1alpha1/graphql';
+    const requestURL = new Request(HGE_URL);
+    const options = {
+      method: 'POST',
+      body: JSON.stringify({
+        query: `
           mutation update_counter {
               update_counter(
                  where: {id: {_eq: 1}},
@@ -19,26 +37,28 @@ $(document).ready(function () {
                  }
            }
           `,
-    }),
+      }),
+    };
+    fetch(requestURL, options)
+      .then(response => {
+        if (response.status === 200) {
+          console.log('request sent to server');
+        } else {
+          console.error(
+            'An error happened while sending the request',
+            response.statusText
+          );
+        }
+      })
+      .catch(err =>
+        console.error('An error occured while sending the request', err)
+      );
   };
-  fetch(r, o)
-    .then(function (response) {
-      if (response.status === 200) {
-        console.log('request sent to server');
-      } else {
-        console.error(
-          'An error happened while sending the request',
-          response.statusText
-        );
-      }
-    })
-    .catch(function (err) {
-      console.error('An error occured while sending the request', err);
-    });
-  //to retrive the count
-  function ret() {
-    const r = new Request(HGE_URL);
-    const o = {
+
+  // retirve the visits of page
+  const retriveVisits = () => {
+    const requestURL = new Request(HGE_URL);
+    const options = {
       method: 'POST',
       body: JSON.stringify({
         query: `
@@ -50,28 +70,35 @@ $(document).ready(function () {
             }`,
       }),
     };
-    fetch(r, o)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (myJson) {
+    fetch(requestURL, options)
+      .then(res => res.json())
+      .then(myJson => {
         for (i = 0; i < myJson.data.counter.length; i++)
           $('#visits').append(
             '<p id="nos">' + myJson.data.counter[i].counts + '</p>'
           );
       });
-  }
-  ret();
+  };
 
-  //scrollReval.js for items
-  ScrollReveal().reveal('#home', { delay: 400 });
-  ScrollReveal().reveal('#about', { delay: 800 });
-  ScrollReveal().reveal('#projects', { delay: 1200 });
-  ScrollReveal().reveal('#contacts', { delay: 1600 });
-  ScrollReveal().reveal('#myname', { delay: 2000 });
-  ScrollReveal().reveal('#message', { delay: 3200 });
+  // hide/show the goto top button
+  const scrollFunction = () => {
+    if (
+      document.body.scrollTop > 150 ||
+      document.documentElement.scrollTop > 150
+    ) {
+      document.getElementById('myBtn').style.display = 'block';
+    } else {
+      document.getElementById('myBtn').style.display = 'none';
+    }
+  };
 
-  //smooth scroll to specific division
+  // to go to the top of the page
+  const totop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
+  // smooth scroll to specific division
   $('#about').click(function () {
     $('html, body').animate(
       {
@@ -100,6 +127,12 @@ $(document).ready(function () {
   });
 
   //scrollReval.js for items
+  ScrollReveal().reveal('#home', { delay: 400 });
+  ScrollReveal().reveal('#about', { delay: 800 });
+  ScrollReveal().reveal('#projects', { delay: 1200 });
+  ScrollReveal().reveal('#contacts', { delay: 1600 });
+  ScrollReveal().reveal('#myname', { delay: 2000 });
+  ScrollReveal().reveal('#message', { delay: 3200 });
   ScrollReveal().reveal('#aboutme', { delay: 300 });
   ScrollReveal().reveal('#pic', { delay: 600 });
   ScrollReveal().reveal('#intro', { delay: 900 });
@@ -121,63 +154,34 @@ $(document).ready(function () {
   ScrollReveal().reveal('#project-6', { delay: 900 });
   ScrollReveal().reveal('#visits', { delay: 7000 });
 
-  //typewriting my name
-  var showText = function (target, message, index, interval) {
-    if (index < message.length) {
-      $(target).append(message[index++]);
-      setTimeout(function () {
-        showText(target, message, index, interval);
-      }, interval);
-    }
-  };
-  setTimeout(function () {
-    $(function () {
-      showText('#myname', 'Anush kumar N', 0, 150);
-    });
-  }, 2400);
-
-  //change the background colors
-  $(function () {
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 500) {
-        $('body').addClass('change-color-1');
-      }
-      if ($(this).scrollTop() > 1200) {
-        $('body').addClass('change-color-2');
-      }
-      if ($(this).scrollTop() > 1900) {
-        $('body').addClass('change-color-3');
-      }
-      if ($(this).scrollTop() < 500) {
-        $('body').removeClass('change-color-1');
-      }
-      if ($(this).scrollTop() < 1200) {
-        $('body').removeClass('change-color-2');
-      }
-      if ($(this).scrollTop() < 1900) {
-        $('body').removeClass('change-color-3');
-      }
-    });
-  });
-
   //to show the scroll to top button
   window.onscroll = function () {
     scrollFunction();
   };
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 150 ||
-      document.documentElement.scrollTop > 150
-    ) {
-      document.getElementById('myBtn').style.display = 'block';
-    } else {
-      document.getElementById('myBtn').style.display = 'none';
-    }
-  }
 
-  //to go to the top of the page
-  function totop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+  gotToTopBtn.addEventListener('click', totop);
+
+  updateVisitor();
+  retriveVisits();
+});
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 500) {
+    $('body').addClass('change-color-1');
+  }
+  if ($(this).scrollTop() > 1200) {
+    $('body').addClass('change-color-2');
+  }
+  if ($(this).scrollTop() > 1900) {
+    $('body').addClass('change-color-3');
+  }
+  if ($(this).scrollTop() < 500) {
+    $('body').removeClass('change-color-1');
+  }
+  if ($(this).scrollTop() < 1200) {
+    $('body').removeClass('change-color-2');
+  }
+  if ($(this).scrollTop() < 1900) {
+    $('body').removeClass('change-color-3');
   }
 });

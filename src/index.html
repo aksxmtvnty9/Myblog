@@ -20,7 +20,7 @@
   <body>
     <p class="notfound">Sorry, website under development.</p>
 
-    <div class="floating-nav">
+    <div id="nav-btns" class="floating-nav">
       <p id="top">Intro</p>
       <p id="center">My works</p>
       <p id="bottom">Contact</p>
@@ -37,11 +37,7 @@
 
       <div id="works" class="works">
         <div class="bio">
-          <img
-            class="round-img"
-            src="assets/images/ak.jpg"
-            alt="my-picture"
-          />
+          <img class="round-img" src="assets/images/ak.jpg" alt="my-picture" />
           <p class="main-bio">
             I'm an <span class="highlight">Engineer</span> from Coimbatore,
             Tamil Nadu, India. I'm working as a Product Engineer @ CodingMart
@@ -63,7 +59,7 @@
               </p>
               <p class="card-code">Javascript</p>
             </div>
-            <button id="map" class="card-btn">View project</button>
+            <button id="map" class="card-btn">View</button>
           </div>
 
           <div class="card">
@@ -74,7 +70,7 @@
               </p>
               <p class="card-code">Javascript</p>
             </div>
-            <button id="game" class="card-btn">View project</button>
+            <button id="game" class="card-btn">View</button>
           </div>
 
           <div class="card">
@@ -85,7 +81,7 @@
               </p>
               <p class="card-code">Python</p>
             </div>
-            <button id="senti" class="card-btn">View project</button>
+            <button id="senti" class="card-btn">View</button>
           </div>
 
           <div class="card">
@@ -94,7 +90,7 @@
               <p class="card-desc">Get Socialized (A clone of facebook).</p>
               <p class="card-code">Javascript</p>
             </div>
-            <button id="friend" class="card-btn">View project</button>
+            <button id="friend" class="card-btn">View</button>
           </div>
 
           <div class="card">
@@ -103,7 +99,7 @@
               <p class="card-desc">Money management (A clone of splitwise).</p>
               <p class="card-code">Javascript</p>
             </div>
-            <button id="split" class="card-btn">View project</button>
+            <button id="split" class="card-btn">View</button>
           </div>
 
           <div class="card">
@@ -114,7 +110,7 @@
               </p>
               <p class="card-code">Javascript</p>
             </div>
-            <button id="dash" class="card-btn">View project</button>
+            <button id="dash" class="card-btn">View</button>
           </div>
         </div>
       </div>
@@ -125,11 +121,12 @@
           <br />
           <div>
             <input
+              id="from-email"
               class="enter-mail-input"
               type="email"
               placeholder="Enter your email"
             />
-            <button class="send-email">Contact</button>
+            <button id="send-mail" class="send-email">Contact</button>
           </div>
         </div>
 
@@ -160,6 +157,8 @@
 
     <!-- inject script on body -->
     <script src="js/libs/jquery-3.3.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
     <script src="js/libs/particle/particles.min.js"></script>
     <script src="js/index.js"></script>
   </body>

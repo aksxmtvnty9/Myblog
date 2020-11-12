@@ -44,7 +44,7 @@ button {
   width: 6vw;
   position: fixed;
   z-index: 3;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -62,7 +62,7 @@ button {
   transition: ease-out 0.2s;
 }
 .floating-nav p:hover {
-  background-color: #fff;
+  background-color: #ffffff70;
   color: #000;
 }
 
@@ -113,7 +113,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #00203fff;
+  background-color: #00203f;
   color: #f0f8ff;
 }
 
@@ -128,8 +128,8 @@ button {
   justify-content: center;
 }
 .round-img {
-  height: 25.34854245880862vh;
-  width: 13.88888888888889vw;
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
 }
 .main-bio {
@@ -165,14 +165,14 @@ button {
   align-items: center;
   position: relative;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.199);
+  background-color: #ffffff33;
 }
 .card p {
   padding: 0.5vh 2vw;
 }
 .card-btn {
-  height: 5vh;
-  width: 8vw;
+  height: 3.5vh;
+  width: 5vw;
   position: absolute;
   right: 2vw;
   color: #f0f8ff;

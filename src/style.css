@@ -5,10 +5,18 @@ html {
 body {
   padding: 0;
   margin: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #000000;
   font-family: 'Raleway', sans-serif;
+}
+::-webkit-scrollbar {
+  background-color: #eee;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 30px;
 }
 span,
 a,
@@ -68,7 +76,7 @@ button {
 
 /* intro section */
 .intro {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -108,12 +116,12 @@ button {
 
 /* works */
 .works {
-  width: 100vw;
+  /* width: 100%; */
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #00203f;
+  /* background-color: #00203f; */
   color: #f0f8ff;
 }
 
@@ -201,7 +209,7 @@ button {
 
 /* contact me */
 .contact-me {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -254,7 +262,7 @@ button {
 /* footer */
 .footer {
   height: 35vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,13 +295,13 @@ button {
 
 /* particle js */
 #particles-js {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
   background-color: #001931;
-  background-image: url('http://vincentgarreau.com/particles.js/assets/img/kbLd9vb_new.gif');
+  background-image: url('/src/assets/images/cat-running.gif');
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: 0 75%;

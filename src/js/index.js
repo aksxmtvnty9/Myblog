@@ -51,7 +51,7 @@ $(function () {
     } else {
       navButtons.fadeOut();
       document.querySelector('#particles-js').style.backgroundImage =
-        'url(/src/assets/images/cat-running.gif)';
+        'url(assets/images/cat-running.gif)';
     }
 
     if (window.pageYOffset >= 1200) {

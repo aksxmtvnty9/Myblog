@@ -301,7 +301,7 @@ button {
   height: 100%;
   z-index: 1;
   background-color: #001931;
-  background-image: url('/src/assets/images/cat-running.gif');
+  background-image: url('assets/images/cat-running.gif');
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: 0 75%;

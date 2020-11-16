@@ -46,9 +46,12 @@ $(function () {
       navButtons.fadeIn();
       Object.keys(navigation).map((key) => {
         document.querySelector(`#${key}`).style.color = '#fff';
+        document.querySelector('#particles-js').style.backgroundImage = 'url()';
       });
     } else {
       navButtons.fadeOut();
+      document.querySelector('#particles-js').style.backgroundImage =
+        'url(/src/assets/images/cat-running.gif)';
     }
 
     if (window.pageYOffset >= 1200) {

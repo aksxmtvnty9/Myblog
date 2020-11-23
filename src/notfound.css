@@ -5,58 +5,18 @@ html {
 body {
   padding: 0;
   margin: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: #000000;
   font-family: 'Raleway', sans-serif;
 }
-::-webkit-scrollbar {
-  background-color: #eee;
-  width: 7px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 30px;
-}
-span,
-a,
-p,
-h1,
-ul,
-li,
-h4,
-h2,
-button {
-  margin: 0;
-  padding: 0;
-  font-family: 'Raleway', sans-serif;
-  list-style: none;
-  text-decoration: none;
-  z-index: 10;
-  outline: none;
+.notfound {
+  width: 100%;
+  color: aquamarine;
 }
 .container {
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  position: absolute;
+  display: none;
 }
-
-/* particle js */
 #particles-js {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-color: #001931;
-  background-image: url('http://vincentgarreau.com/particles.js/assets/img/kbLd9vb_new.gif');
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: 0 70%;
-}
-canvas {
-  display: block;
-  vertical-align: bottom;
-  z-index: 1;
+  display: none;
 }

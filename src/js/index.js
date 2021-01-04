@@ -1,17 +1,4 @@
 $(function () {
-  // Initialize Firebase
-  const firebaseConfig = {
-    apiKey: 'AIzaSyDqNGdd6ZTXd7EKzj2lmeCGbA9rMNNhzqY',
-    authDomain: 'blog-collab.firebaseapp.com',
-    databaseURL: 'https://blog-collab.firebaseio.com',
-    projectId: 'blog-collab',
-    storageBucket: 'blog-collab.appspot.com',
-    messagingSenderId: '1046185435674',
-    appId: '1:1046185435674:web:814f14cc558a3846c827a3',
-  };
-  firebase.initializeApp(firebaseConfig);
-  const fireDb = firebase.database();
-
   // particlesJS
   particlesJS.load(
     'particles-js',
@@ -87,17 +74,6 @@ $(function () {
     );
   });
 
-  // sets collab email in firebase
-  const setEmailInFirebase = () => {
-    const fromEmail = $('#from-email').val();
-    const dbRef = fireDb.ref('users/');
-    const pushKey = dbRef.push();
-
-    pushKey.set({
-      email: fromEmail,
-    });
-  };
-
   // redirects to mail page
   const redirectToMail = () => {
     const link =
@@ -114,7 +90,6 @@ $(function () {
 
   // Send emails for collab
   $('#send-mail').click(() => {
-    setEmailInFirebase();
     redirectToMail();
   });
 });

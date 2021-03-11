@@ -71,9 +71,9 @@ $(function () {
   const sendEmailBtn = document.querySelector('#sendEmailBtn');
   if (sendEmailBtn) {
     sendEmailBtn.addEventListener('click', function () {
-      const nameElement = $('#name').val();
-      const emailElement = $('#email').val();
-      const messageElement = $('#message').val();
+      const nameElement = $('#name');
+      const emailElement = $('#email');
+      const messageElement = $('#message');
 
       const url = 'https://formsubmit.co/ajax/18c6dfc44d235115c857808037747faf';
       const params = {
@@ -83,9 +83,9 @@ $(function () {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-          name: nameElement,
-          email: emailElement,
-          message: messageElement,
+          name: nameElement.val(),
+          email: emailElement.val(),
+          message: messageElement.val(),
         }),
       };
 
@@ -107,6 +107,9 @@ $(function () {
               timer: 2500,
             });
           }
+          nameElement.val('');
+          emailElement.val('');
+          messageElement.val('');
         })
         .catch((error) => console.error(error));
     });

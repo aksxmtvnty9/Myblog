@@ -3,10 +3,17 @@ $(function () {
   particlesJS.load(
     'particles-js',
     'js/libs/particle/particlesjs-config.json',
-    function () {
-      console.log('callback - particles.js config loaded');
-    }
+    () => console.log('callback - particles.js config loaded')
   );
+
+  // Typewriting my name
+  const showText = (target, message, index, interval) => {
+    if (index < message.length) {
+      $(target).append(message[index++]);
+      setTimeout(() => showText(target, message, index, interval), interval);
+    }
+  };
+  showText('#myName', 'Anush kumar N', 0, 100);
 
   // Onclick for the navigation
   const navigation = {
@@ -31,31 +38,17 @@ $(function () {
     const navButtons = $('#nav-btns');
     if (window.pageYOffset + 400 >= window.innerHeight) {
       navButtons.fadeIn();
-      Object.keys(navigation).map((key) => {
-        document.querySelector(`#${key}`).style.color = '#fff';
-        document.querySelector('#particles-js').style.backgroundImage = 'url()';
-      });
     } else {
       navButtons.fadeOut();
-      document.querySelector('#particles-js').style.backgroundImage =
-        'url(assets/images/cat-running.gif)';
-    }
-
-    if (window.pageYOffset >= 1200) {
-      Object.keys(navigation).map((key) => {
-        document.querySelector(`#${key}`).style.color = '#00203f';
-      });
     }
   };
 
-  // Onclick for projects
+  // // Onclick for projects
   const projectLinks = {
     map: 'https://github.com/anush629/Map.io',
     game: 'https://github.com/anush629/2048',
-    senti: 'https://github.com/anush629/Sentiment-Analyser',
     friend: 'https://github.com/anush629/Friend-Finder',
     split: 'https://github.com/anush629/Splitpanunga',
-    dash: 'https://github.com/anush629/Dashboard-for-dhanamtechsolutions',
   };
   Object.keys(projectLinks).map((key) => {
     const redirectBtn = document.querySelector(`#${key}`);
@@ -64,7 +57,7 @@ $(function () {
     });
   });
 
-  // smooth scroll to works section
+  // Smooth scroll to works section
   $('#works-btn').click(() => {
     $('html, body').animate(
       {
@@ -74,22 +67,48 @@ $(function () {
     );
   });
 
-  // redirects to mail page
-  const redirectToMail = () => {
-    const link =
-      'mailto:anush.kumar.1998@gmail.com' +
-      '?cc=' +
-      '&subject=' +
-      encodeURIComponent('Ready for collab?') +
-      '&body=' +
-      encodeURIComponent(
-        'Hey Anush,\n\nReady to start a discussion or start collaborating in open source projects?\nI will be waiting for your collaboration.\n\nThanks'
-      );
-    window.location.href = link;
-  };
+  // Send email
+  const sendEmailBtn = document.querySelector('#sendEmailBtn');
+  if (sendEmailBtn) {
+    sendEmailBtn.addEventListener('click', function () {
+      const nameElement = $('#name').val();
+      const emailElement = $('#email').val();
+      const messageElement = $('#message').val();
 
-  // Send emails for collab
-  $('#send-mail').click(() => {
-    redirectToMail();
-  });
+      const url = 'https://formsubmit.co/ajax/18c6dfc44d235115c857808037747faf';
+      const params = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: nameElement,
+          email: emailElement,
+          message: messageElement,
+        }),
+      };
+
+      fetch(url, params)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            swal({
+              text: 'Got your mail, will revert you.',
+              icon: 'success',
+              button: false,
+              timer: 2500,
+            });
+          } else {
+            swal({
+              text: 'Oops, Something bad happend',
+              icon: 'success',
+              button: false,
+              timer: 2500,
+            });
+          }
+        })
+        .catch((error) => console.error(error));
+    });
+  }
 });

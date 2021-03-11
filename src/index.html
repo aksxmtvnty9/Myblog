@@ -3,23 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anush kumar N | anush.kumar.1998@gmail.com</title>
+    <title>Anush kumar N | Welcome</title>
     <link rel="icon" href="assets/images/ak icon.png" />
-    <link
-      rel="stylesheet"
-      media="screen and (max-width: 435px)"
-      href="notfound.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (min-width: 900px)"
-      type="text/css"
-      href="style.css"
-    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <p class="notfound">Sorry, website under development.</p>
-
     <div id="nav-btns" class="floating-nav">
       <p id="top">Intro</p>
       <p id="center">My works</p>
@@ -28,105 +16,78 @@
 
     <div class="container">
       <div id="intro" class="intro">
-        <p class="main-text">
-          Hello, I'm <span class="highlight">Anush kumar N</span><br />
-          I'm a <span class="highlight-two">Software</span> developer.
-        </p>
-        <button id="works-btn" class="main-btn">View my works</button>
+        <div class="align">
+          <p class="main-text">
+            Hello <span class="highlight">there!</span><br />
+            I'm <span id="myName" class="highlight-two"></span>,<br />
+            a <span class="highlight-three">Software</span> developer<br />
+            specializing in <span class="highlight-four">Web</span> development.
+          </p>
+          <button id="works-btn" class="main-btn">View my works</button>
+        </div>
       </div>
 
       <div id="works" class="works">
-        <div class="bio">
-          <img class="round-img" src="assets/images/ak.jpg" alt="my-picture" />
-          <p class="main-bio">
-            I'm an <span class="highlight">Engineer</span> from Coimbatore,
-            Tamil Nadu, India. I'm working as a Product Engineer @ CodingMart
-            Technologies with current leading web libraries and frameworks like
-            <span class="highlight-two">React, Vue.js, Node.js</span>. I love
-            Coding, Problem solving and doing music.
-          </p>
-        </div>
-
-        <div class="h-ruler"></div>
-
+        <p class="my-works">My works</p>
         <div class="works-list">
-          <h2 class="my-works">My works</h2>
-          <div class="card">
-            <div>
-              <p class="card-heading">Map.io</p>
-              <p class="card-desc">
-                Map.io - A best map you can get to play with
-              </p>
-              <p class="card-code">Javascript</p>
-            </div>
-            <button id="map" class="card-btn">View</button>
+          <div class="work-card">
+            <h3 class="work-heading">2048</h3>
+            <p class="work-desc">
+              Its the famous game 2048 built completely with HTML, CSS, JS. I have used Hammer.js to integrate swipe functions too.
+            </p>
+            <p id="game" class="work-view">View project</p>
           </div>
-
-          <div class="card">
-            <div>
-              <p class="card-heading">2048</p>
-              <p class="card-desc">
-                Its the famous game 2048 built completely with HTML, C...
-              </p>
-              <p class="card-code">Javascript</p>
-            </div>
-            <button id="game" class="card-btn">View</button>
+          <div class="work-card">
+            <h3 class="work-heading">Map.io</h3>
+            <p class="work-desc">
+              A best map you can get to play with. I have used bing maps and completely customised the map like driving cars in it and etc. 
+            </p>
+            <p id="map" class="work-view">View project</p>
           </div>
-
-          <div class="card">
-            <div>
-              <p class="card-heading">Sentiment Analyser</p>
-              <p class="card-desc">
-                Sentiment analyser tool designed to take the effort of sen...
-              </p>
-              <p class="card-code">Python</p>
-            </div>
-            <button id="senti" class="card-btn">View</button>
+          <div class="work-card">
+            <h3 class="work-heading">Friend Finder</h3>
+            <p class="work-desc">
+              Get Socialized. I tried to clone facebook (not completely) having basic functionalities. 
+            </p>
+            <p id="friend" class="work-view">View project</p>
           </div>
-
-          <div class="card">
-            <div>
-              <p class="card-heading">Friend Finder</p>
-              <p class="card-desc">Get Socialized (A clone of facebook).</p>
-              <p class="card-code">Javascript</p>
-            </div>
-            <button id="friend" class="card-btn">View</button>
-          </div>
-
-          <div class="card">
-            <div>
-              <p class="card-heading">Split panunga</p>
-              <p class="card-desc">Money management (A clone of splitwise).</p>
-              <p class="card-code">Javascript</p>
-            </div>
-            <button id="split" class="card-btn">View</button>
-          </div>
-
-          <div class="card">
-            <div>
-              <p class="card-heading">Dashboard for dhanamtechsolutions</p>
-              <p class="card-desc">
-                This is a personalised goods management system for the...
-              </p>
-              <p class="card-code">Javascript</p>
-            </div>
-            <button id="dash" class="card-btn">View</button>
+          <div class="work-card">
+            <h3 class="work-heading">Splitpannunga</h3>
+            <p class="work-desc">
+              Money management. I tried to clone Splitwise (not completely) having basic functionalities.
+            </p>
+            <p id="split" class="work-view">View project</p>
           </div>
         </div>
       </div>
 
       <div id="contact" class="contact-me">
         <div class="contact-me-form">
-          <p>For any collaborations and discussion</p>
+          <p class="collab-bold">For any collaborations and discussion</p>
           <br />
-          <div>
+          <div class="align-responsive">
             <input
-              id="from-email"
-              class="enter-mail-input"
-              type="email"
-              placeholder="Enter your email"
+              type="text"
+              id="name"
+              class="enter-input input-short"
+              placeholder="Name"
+              required
             />
-            <button id="send-mail" class="send-email">Contact</button>
+            <input
+              type="email"
+              id="email"
+              class="enter-input input-short"
+              placeholder="Email"
+              required
+            /><br />
+            <input
+              type="text"
+              id="message"
+              class="enter-input input-long"
+              placeholder="Enter your message, keep it short!"
+              required
+            /><br />
+            <button id="sendEmailBtn" class="send-email">Send</button>
           </div>
         </div>
 
@@ -158,6 +119,7 @@
     <!-- inject script on body -->
     <script src="js/libs/jquery-3.3.1.min.js"></script>
     <script src="js/libs/particle/particles.min.js"></script>
+    <script src="js/libs/sweet-alert.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

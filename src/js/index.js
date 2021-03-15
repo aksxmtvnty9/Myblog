@@ -45,10 +45,10 @@ $(function () {
 
   // // Onclick for projects
   const projectLinks = {
-    map: 'https://github.com/anush629/Map.io',
-    game: 'https://github.com/anush629/2048',
-    friend: 'https://github.com/anush629/Friend-Finder',
-    split: 'https://github.com/anush629/Splitpanunga',
+    map: 'https://github.com/pascerprano/Map.io',
+    game: 'https://github.com/pascerprano/2048',
+    friend: 'https://github.com/pascerprano/Friend-Finder',
+    split: 'https://github.com/pascerprano/Splitpanunga',
   };
   Object.keys(projectLinks).map((key) => {
     const redirectBtn = document.querySelector(`#${key}`);

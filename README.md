@@ -12,11 +12,11 @@ My way to showcase my work life story.
 
 ## Install dependencies
 
-``` Yarn ```
+``` yarn ```
 
 ## To run application
 
-``` Yarn run dev ```
+``` yarn run dev ```
 
 ## 📝 License
 

@@ -4,8 +4,19 @@
 
 ## Description
 
-This is my personal website/portfolio, view it and have fun.
+My way to showcase my work life story.
 
+## Prerequisites
+
+``` Yarn - v1.22.* ```
+
+## Install dependencies
+
+``` Yarn ```
+
+## To run application
+
+``` Yarn run dev ```
 
 ## 📝 License
 

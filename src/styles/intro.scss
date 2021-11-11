@@ -1,0 +1,66 @@
+@import '_variables.scss';
+
+.intro-text {
+  line-height: 50px;
+  font-size: $fontsizeM * 1.9;
+  margin-right: $spaceXXLarge + 10px;
+  opacity: 0;
+  line-height: 6vh;
+  transition: opacity 1s;
+  background: linear-gradient(
+    0deg,
+    $colorDarkPrimary 0%,
+    rgba(56, 56, 56, 1) 38%,
+    $color1 76%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  h1 {
+    color: $color1;
+    background: linear-gradient($color1, $color1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: $fontsizeM * 2.9;
+    padding-top: $spaceLargeHeight * 1.5;
+    padding-bottom: $spaceXLarge;
+  }
+}
+
+.intro-img {
+  padding-left: $spaceLarge;
+  width: 55%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* For mobile phones, tabs, ipads etc. */
+@media only screen and (max-width: 768px) {
+  .intro-text {
+    line-height: 30px;
+    font-size: 2.7vh;
+    padding-left: 0;
+    opacity: 0;
+    transition: opacity 1s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 0;
+
+    h1 {
+      font-size: 7vh;
+      padding-top: $spaceXXLarge;
+      padding-bottom: $spaceXLarge;
+    }
+  }
+
+  .intro-img {
+    padding-top: $spaceXLarge;
+    padding-left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+}

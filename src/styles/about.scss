@@ -1,0 +1,76 @@
+@import '_variables.scss';
+
+.about-text {
+  line-height: $spaceSmallHeight;
+  font-size: $fontsizeM * 1.2;
+  padding-top: $spaceMediumHeight * 1.2;
+  padding-left: $spaceLarge;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    346deg,
+    rgba(255, 215, 0, 1) 5%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-img {
+  width: 55%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.social-btns {
+  display: flex;
+}
+
+.social-btns a {
+  margin-top: $spaceLarge;
+  margin-right: $spaceLarge;
+}
+
+.social-btns img {
+  height: 25px;
+  width: 25px;
+  transition: transform 300ms;
+  filter: invert(100%);
+
+  &:hover {
+    transform: scale(1.5);
+    filter: invert(83%) sepia(16%) saturate(3622%) hue-rotate(360deg)
+      brightness(104%) contrast(104%);
+  }
+}
+
+.resume-btn {
+  transition: color 300ms;
+
+  &:hover {
+    color: $color2;
+  }
+}
+
+/* For mobile phones, tabs, ipads etc. */
+@media only screen and (max-width: 768px) {
+  .about-text {
+    width: 100%;
+    line-height: 35px;
+    font-size: $spaceLarge;
+    padding-top: $spaceXLarge * 0.9;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .about-img {
+    display: none;
+  }
+
+  .social-btns {
+    justify-content: left;
+  }
+}

@@ -2,6 +2,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -10,13 +11,16 @@ body {
   background-color: #000000;
   font-family: 'Raleway', sans-serif;
 }
+
 .notfound {
   width: 100%;
   color: aquamarine;
 }
+
 .container {
   display: none;
 }
+
 #particles-js {
   display: none;
 }

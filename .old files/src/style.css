@@ -1,23 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100vh;
-  background-color: #000000;
-  font-family: 'Raleway', sans-serif;
+  background-color: #ffff;
+  font-family: 'Josefin Sans', sans-serif;
 }
+
 ::-webkit-scrollbar {
   background-color: #eee;
   width: 7px;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: #ccc;
   border-radius: 30px;
 }
+
 span,
 a,
 p,
@@ -29,21 +34,25 @@ h2,
 button {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   list-style: none;
   text-decoration: none;
   z-index: 10;
   outline: none;
 }
+
 .highlight {
   color: #be2f29;
 }
+
 .highlight-three {
   color: #32cd32;
 }
+
 .highlight-two {
   color: #ecaf44;
 }
+
 .highlight-four {
   color: #9932cc;
 }
@@ -55,49 +64,65 @@ button {
   position: absolute;
 }
 
-/* floating nav */
-.floating-nav {
-  top: 42vh;
-  left: 93vw;
-  width: 6vw;
-  position: fixed;
-  z-index: 3;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.floating-nav p {
-  width: 100%;
-  font-size: 1vw;
-  display: flex;
-  color: #ecaf44;
-  text-transform: uppercase;
-  justify-content: center;
-  align-items: center;
-  padding: 1vh 0.5vw;
-  cursor: pointer;
-  transition: ease-out 0.2s;
-}
-.floating-nav p:hover {
-  background-color: #0c1115;
-}
-
 /* intro section */
 .intro {
   width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
+
+.left-section {
+  padding: 50px 70px;
+  display: flex;
+  /* background-color: pink; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-name {
+  cursor: default;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+
+.open-arrow {
+  position: relative;
+  left: 10px;
+  top: -3px;
+  height: 25px;
+  transform: rotateX(180deg);
+}
+
+.floating-nav {
+  padding: 50px 70px;
+  display: flex;
+  /* background-color: #32cd32; */
+}
+
+.floating-nav p {
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: all 300ms;
+}
+
+.floating-nav p:hover {
+  color: dodgerblue;
+}
+
 .main-text {
   color: #f0f8ff;
   font-size: 3vw;
   line-height: 7.5vh;
   padding: 1vh 1vw 1vh 1vw;
 }
+
 .main-btn {
   padding: 1vh 1vw;
   width: 11vw;
@@ -107,8 +132,9 @@ button {
   font-size: 1.2vw;
   border: 1px solid #eeeeee;
   background-color: transparent;
-  transition: 0.3s;
+  transition: 300ms;
 }
+
 .main-btn:hover {
   border: 1px solid #c71585;
   background-color: #c71585;
@@ -122,18 +148,21 @@ button {
   background-color: #fff;
   color: #fff;
 }
+
 .my-works {
   color: #ecaf44;
   font-weight: 800;
   font-size: 2vw;
   padding: 10vh 10vw 20vh 10vw;
 }
+
 /* works list */
 .works-list {
   display: flex;
   width: 80%;
   margin: 0 auto;
 }
+
 .work-card {
   width: 20vw;
   height: 40vh;
@@ -144,20 +173,24 @@ button {
   background-color: #0c1115;
   box-shadow: 5px 5px 10px #141414;
 }
+
 .work-heading {
   padding: 2vh 1vw;
   color: #ecaf44;
 }
+
 .work-desc {
   padding: 2vh 1vw;
   height: 12vh;
 }
+
 .work-view {
   cursor: pointer;
   margin: 5vh 5vw;
   color: #ecaf44;
-  transition: 0.3s;
+  transition: 300ms;
 }
+
 .work-view:hover {
   color: #be2f29;
 }
@@ -173,6 +206,7 @@ button {
   background-color: #fff;
   color: #00203fff;
 }
+
 /* contact me form */
 .contact-me-form {
   height: 75vh;
@@ -184,10 +218,12 @@ button {
   text-align: center;
   font-size: 2.2vw;
 }
+
 .collab-bold {
   color: #ecaf44;
   font-weight: 800;
 }
+
 .enter-input {
   font-family: 'Raleway', sans-serif;
   background-color: transparent;
@@ -198,16 +234,20 @@ button {
   outline: none;
   padding: 0.5vh 1vw;
 }
+
 .enter-input::placeholder {
   color: #1a2c42;
 }
+
 .input-short {
   width: 17vw;
 }
+
 .input-long {
   margin: 1vh 0 0 0;
   width: 37vw;
 }
+
 .send-email {
   height: 5.4vh;
   width: 8vw;
@@ -220,6 +260,7 @@ button {
   border-radius: 4px;
   transition: ease-out 0.2s;
 }
+
 .send-email:hover {
   background-color: #be2f29;
   color: #ecaf44;
@@ -236,23 +277,28 @@ button {
   color: #ecaf44;
   position: relative;
 }
+
 .footer-name {
   position: absolute;
   left: 10vw;
 }
+
 .social-btns {
   display: flex;
   position: absolute;
   right: 10vw;
 }
+
 .social-btns a {
   margin: 0 1vw;
 }
+
 .social-btns img {
   height: 30px;
   width: 30px;
   filter: invert(100%);
 }
+
 .social-btns img:hover {
   height: 30px;
   width: 30px;
@@ -276,6 +322,7 @@ button {
   .floating-nav {
     display: none !important;
   }
+
   /* intro section */
   .main-text {
     font-size: 5.5vw;
@@ -283,9 +330,11 @@ button {
     text-align: center;
     padding: 1vh 1vw 1vh 1vw;
   }
+
   .align {
     text-align: center;
   }
+
   .main-btn {
     padding: 1vh 1vw;
     width: 30vw;
@@ -337,7 +386,7 @@ button {
     cursor: pointer;
     margin: 0;
     color: #ecaf44;
-    transition: 0.3s;
+    transition: 300ms;
   }
   .work-view:hover {
     color: #be2f29;

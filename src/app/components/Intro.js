@@ -14,11 +14,14 @@ const Intro = () => {
   return (
     <section className="wrapper">
       <div className="intro-text">
-        <h1>Hello !</h1>
-        I'm Anush kumar N,
-        <br />a Software developer
-        <br /> specializing in
-        <br /> Web development.
+        <span>
+          <h1>Hello</h1>
+          <h2>👋</h2>
+        </span>
+        <p>
+          I'm Anush kumar N, A software engineer specializing in Web
+          development.
+        </p>
       </div>
       <img className="intro-img" src={Programmer} alt="programmer" />
     </section>

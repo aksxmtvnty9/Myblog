@@ -113,26 +113,33 @@
 /* For mobile phones, tabs, ipads etc. */
 @media only screen and (max-width: 768px) {
   .projects-info {
-    padding-top: 25vh;
+    padding-top: 10vh;
   }
 
   .arrow {
     width: 10%;
   }
 
+  .project-detail {
+    flex-direction: column-reverse;
+    height: 50vh;
+  }
+
   .project-def {
     z-index: 1;
+    left: 0;
+    top: -20%;
   }
 
   .project-heading {
     font-size: 2.2vh;
-    padding-bottom: 12px;
+    padding-bottom: 1vh;
   }
 
   .project-type {
     color: #c0c0c0;
     font-size: 1.9vh;
-    padding-bottom: 7px;
+    padding-bottom: 0.8vh;
   }
 
   .project-link {
@@ -140,38 +147,38 @@
   }
 
   .random-object-1 {
-    width: 20vw;
-    height: 15vh;
+    width: 40vw;
+    height: 35vh;
+    border-radius: 5%;
     margin: 0;
   }
 
   .random-object-2 {
-    width: 25vw;
-    height: 15vh;
+    width: 42vw;
+    height: 24vh;
     border-radius: 50%;
     background-color: $color1;
-    margin: 0;
   }
 
   .random-object-3 {
     width: 0;
     height: 0;
-    border-bottom: 20vh solid $color1;
-    border-left: 25vw solid transparent;
+    border-bottom: 35vh solid #6495ed;
+    border-left: 40vw solid transparent;
   }
 
   .random-object-4 {
-    width: 10vw;
-    height: 13vh;
+    width: 30vw;
+    height: 31vh;
     transform: skew(20deg);
     background: $color1;
   }
 
   .random-object-5 {
-    border-bottom: 15vh solid $color1;
-    border-left: 5vw solid transparent;
-    border-right: 5vw solid transparent;
+    border-bottom: 30vh solid #6495ed;
+    border-left: 10vw solid transparent;
+    border-right: 10vw solid transparent;
     height: 0;
-    width: 10vw;
+    width: 30vw;
   }
 }

@@ -21,7 +21,7 @@ export const projectList = [
   },
   {
     name: '2048',
-    type: 'Website',
+    type: 'Game',
     link: 'https://github.com/aksxmtvnty9/2048',
   },
 ];

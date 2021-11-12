@@ -1,22 +1,23 @@
-# Myblog
 [![Netlify Status](https://api.netlify.com/api/v1/badges/04509c49-a4d8-45c1-9e35-846db7aedc24/deploy-status)](https://app.netlify.com/sites/anushkumar629/deploys)
 
-
-## Description
+# Portfolio
 
 My way to showcase my work life story.
 
 ## Prerequisites
 
-``` Yarn - v1.22.* ```
+- Prefer Node >= v14.
 
-## Install dependencies
+- Prefer Yarn >= v1.22.
 
-``` yarn ```
+- Install dependencies
+  `yarn`
 
-## To run application
+## Development
 
-``` yarn run dev ```
+### To run application
+
+`yarn dev`
 
 ## 📝 License
 

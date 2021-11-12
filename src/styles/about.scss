@@ -9,14 +9,11 @@
   transition: opacity 1s;
 }
 
-.gradient-text {
-  background: linear-gradient(
-    346deg,
-    rgba(255, 215, 0, 1) 5%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.main-text {
+  width: 25vw;
+  color: $color2;
+  line-height: 4.5vh;
+  margin-bottom: 3vh;
 }
 
 .about-img {
@@ -47,6 +44,10 @@
   }
 }
 
+.carrer-story {
+  margin-top: 4vh;
+}
+
 .resume-btn {
   transition: color 300ms;
 
@@ -59,11 +60,15 @@
 @media only screen and (max-width: 768px) {
   .about-text {
     width: 100%;
-    line-height: 35px;
     font-size: $spaceLarge;
     padding-top: $spaceXLarge * 0.9;
     opacity: 0;
     transition: opacity 1s;
+  }
+
+  .main-text {
+    width: 65vw;
+    margin-bottom: 3vh;
   }
 
   .about-img {
@@ -71,6 +76,15 @@
   }
 
   .social-btns {
-    justify-content: left;
+    width: 65vw;
+    justify-content: center;
+  }
+
+  .carrer-story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55vw;
+    margin-top: 4vh;
   }
 }

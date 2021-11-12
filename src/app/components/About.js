@@ -18,13 +18,10 @@ const About = () => {
     <section className="wrapper">
       <img className="about-img" src={HappyMe} alt="programmer" />
       <div className="about-text">
-        <div className="gradient-text">
-          Heyaa! I'm Anush kumar N, <br />
-          from India. I love to code, do music and
-          <br />
-          rarely tour with my ride. If you like my work <br />
-          don't hesitate to reach me out.
-          <br />
+        <div className="main-text">
+          Heyaa! I'm Anush kumar N, from India. I love to code, do music and
+          rarely tour with my ride. If you like my work don't hesitate to reach
+          me out.
         </div>
         <div className="social-btns">
           <a
@@ -51,17 +48,17 @@ const About = () => {
             <img src={Twitter} alt="twitter" />
           </a>
         </div>
-        <br />
-        My carrer story:
-        <br />
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://twitter.com/aksxmtvnty9"
-          className="resume-btn"
-        >
-          Resume
-        </a>
+        <div className="carrer-story">
+          <p>My carrer story:</p>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://twitter.com/aksxmtvnty9"
+            className="resume-btn"
+          >
+            Resume
+          </a>
+        </div>
       </div>
     </section>
   );
